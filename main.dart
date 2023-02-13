@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        colorSchemeSeed: Color.fromARGB(255, 255, 255, 255),
+        useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Simple UI'),
     );
@@ -33,139 +34,215 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        centerTitle: true,
-      ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Container(
-                color: Colors.red,
-                height: 64,
-                width: 64, 
-                margin: const  EdgeInsets.only(
-                      left: 16,
-                      top: 16,
-                    ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
+
+    return Scaffold
+    (
+      body: Column
+      (
+        children: 
+        [
+          Row
+          (
+            children: 
+            [
+              Column
+              (
+                children: 
+                [
+                  Container
+                  (
+                    // decoration: BoxDecoration(
+                    //   border: Border.all(width: 5, color: Colors.red),
+                    //   borderRadius: BorderRadius.all(Radius.circular(1)),
+                    // ),
+                    alignment: Alignment.center,
                     color: Colors.blue,
-                    height: 18,
-                    width: 260, 
-                    margin: const EdgeInsets.only(
-                      left: 16,
-                      top: 16,
+                    height: 32,
+                    width: 32,
+                    margin: const  EdgeInsets.only
+                    (
+                          left: 20,
+                          top: 16,
                     ),
                   ),
-                  Container(
-                    color: Colors.blue,
-                    height: 16,
-                    width: 200, 
-                    margin: const EdgeInsets.only(
-                      left: 16,
-                      top: 8,
-                    ),
-                  ),
-         
-                  
-                  
-                  
                 ],
               ),
-          
+              Column
+              (
+                children: 
+                [
+                  Container
+                  (
+                    alignment: Alignment.center,
+                    color: Colors.blue,
+                    height: 32,
+                    width: 270,
+                    margin: const EdgeInsets.only
+                    (
+                      left: 100,
+                      top: 16,
+                    ),
+                  )
+                ],
+              )
             ],
           ),
-          
-          const SizedBox(height: 16),
-          const Divider(height: 1.25),
+          Row
+          (
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: 
+            [
+              Stack
+              (
+                alignment: Alignment.bottomRight,
+                clipBehavior: Clip.none,
+                children: 
+                [
+                  Container
+                  (
+                    decoration: const BoxDecoration
+                    (
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.all(Radius.circular(20.0))
+                    ),
+                    alignment: Alignment.center,
+                    // color: Colors.blue,
+                    height: 130,
+                    width: 130,
+                    margin: const EdgeInsets.only
+                    (
+                      top: 60
+                    ),
+                  ),
+                  Positioned
+                  (
+                    bottom: -10,
+                    right: -10,
+                    child: Container
+                    (
+                      decoration: const BoxDecoration
+                      (
+                        color: Colors.lightBlueAccent,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))
+                      ),
+                      alignment: Alignment.center,
+                      height: 40,
+                      width: 40,
+                    )
+                  ),
+                ],
+              )
+            ],
+          ),
           for(var i = 0; i < 4; i++) ...[
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      color: Colors.red,
-                      height: 52,
-                      width: 52, 
-                      margin: const  EdgeInsets.only(
-                            left: 16,
-                            top: 16,
-                          ),
+            Row
+            (
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: 
+              [
+                Stack
+                (
+                  alignment:  Alignment.topLeft,
+                  clipBehavior:  Clip.none,
+                  children: 
+                  [
+                    Container
+                    (
+                      decoration: const BoxDecoration
+                      (
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))
+                      ),
+                      height: 60,
+                      width: 400,
+                      margin: const EdgeInsets.only
+                      (
+                        top: 70
+                      ),
                     ),
-                    Container(
-                      color: Colors.blue,
-                      height: 16,
-                      width: 200, 
-                      margin: const  EdgeInsets.only(
-                            left: 16,
-                            top: 16,
-                          ),
-                    ),
-                  ],
-                ),
-                Container(
-                  color: Colors.yellow,
-                  height: 16,
-                  width: 16,
-                  margin: const EdgeInsets.only(
-                    right: 16
-                  )
-                )
-              ]
-            ),
-          ],
-          const SizedBox(height: 16),
-          const Divider(height: 1.25),
-          
-          for(var i = 0; i < 3; i++) ...[
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      color: Colors.red,
-                      height: 52,
-                      width: 52, 
-                      margin: const  EdgeInsets.only(
-                            left: 16,
-                            top: 16,
-                          ),
-                    ),
-                    Container(
-                      color: Colors.blue,
-                      height: 16,
-                      width: 200, 
-                      margin: const  EdgeInsets.only(
-                            left: 16,
-                            top: 16,
-                          ),
+                    Positioned
+                    (
+                      top: 37,
+                      // right: 10,
+                      child: Container
+                      (
+                        decoration: const BoxDecoration
+                        (
+                          color: Colors.lightBlueAccent,
+                          // borderRadius: BorderRadius.all(Radius.circular(10.0))
+                        ),
+                        alignment: Alignment.center,
+                        height: 23,
+                        width: 120,
+                      )
                     ),
                   ],
-                ),
-                Container(
-                  color: Colors.yellow,
-                  height: 16,
-                  width: 16,
-                  margin: const EdgeInsets.only(
-                    right: 16
-                  )
                 )
-              ]
-            ),
-          ]
+              ],
+            )
+          ], //For loop
+          Row
+            (
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: 
+              [
+                Stack
+                (
+                  alignment:  Alignment.topLeft,
+                  clipBehavior:  Clip.none,
+                  children: 
+                  [
+                    Container
+                    (
+                      decoration: const BoxDecoration
+                      (
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))
+                      ),
+                      height: 70,
+                      width: 190,
+                      margin: const EdgeInsets.only
+                      (
+                        top: 80
+                      ),
+                    ),
+                    Positioned
+                    (
+                      top: 45,
+                      // right: 10,
+                      child: Container
+                      (
+                        decoration: const BoxDecoration
+                        (
+                          color: Colors.lightBlueAccent,
+                          // borderRadius: BorderRadius.all(Radius.circular(10.0))
+                        ),
+                        alignment: Alignment.center,
+                        height: 23,
+                        width: 120,
+                      )
+                    ),
+                    Container
+                    (
+                      decoration: const BoxDecoration
+                      (
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))
+                      ),
+                      height: 70,
+                      width: 190,
+                      margin: const EdgeInsets.only
+                      (
+                        top: 80,
+                        left: 210
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            )
         ],
       ),
     );
