@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       [
                         Text
                         (
-                          "William John Malike",
+                          "Billy Bill Bob",
                           style: TextStyle
                           (
                             fontWeight: FontWeight.bold,
